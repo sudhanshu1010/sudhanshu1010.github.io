@@ -235,21 +235,24 @@ header nav .branding {
 .hero .right h1 span::before{
     color: var(--primary);
     content: '';
-    animation: animateText infinite 5s;
+    animation: animateText 10s linear infinite;
 }
 
 @keyframes animateText {
     0% {
         content: 'Web Developer!';
     }
-    50% {
+    25% {
         content: 'Freelancer!';
     }
-    66% {
+    50% {
         content: 'Graphic Desinger!';
     }
-    100% {
+    75%{
         content: 'Coder!';
+    }
+    100%{
+        content: 'Front End Developer'
     }
 }
 

@@ -27,6 +27,30 @@ body, html {
     -webkit-font-smoothing: antialiased;
 }
 
+/* scroll up button */
+.circle {
+    background-color: var(--dark);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 96%;
+    margin-top: 43rem;
+    position: fixed;
+    z-index: 1000;
+    text-align: center;
+}
+
+.up-arrow {
+    border: solid var(--primary);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-135deg);
+    margin-top: 40%;
+}
+
+
 
 
 /* hamberger designs */
@@ -143,6 +167,7 @@ body, html {
 }
 
 /* styling of pages starts here */
+
 header {
     background: var(--dark);
     clip-path: polygon(0 0, 100% 0, 100% 100%,70% 87%, 0 100%); /* to give a triagular shape at bottom of first container*/
@@ -190,7 +215,7 @@ header nav .branding {
     transition: all 0.2s ease-in;
 } */
 .hero .right h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 100;
     line-height: 1.2; /* to reduce the line gap*/
     margin-bottom: 2rem;
@@ -204,6 +229,28 @@ header nav .branding {
 }
 .hero .right {
     margin-top: -7rem;
+}
+
+/* text animations */
+.hero .right h1 span::before{
+    color: var(--primary);
+    content: '';
+    animation: animateText infinite 5s;
+}
+
+@keyframes animateText {
+    0% {
+        content: 'Web Developer!';
+    }
+    50% {
+        content: 'Freelancer!';
+    }
+    66% {
+        content: 'Graphic Desinger!';
+    }
+    100% {
+        content: 'Coder!';
+    }
 }
 
 
@@ -311,7 +358,6 @@ section.services .card-wrapper .card img {
 }
 section.services .card-wrapper .card:hover {
     background: linear-gradient(rgba(0,0,0,1),rgba(61,207,211,0.7));
-    cursor: pointer;
     transform: scale(1.1);
 }
 section.services .card-wrapper .card:hover h2, section.services .card-wrapper .card:hover p {
@@ -649,6 +695,9 @@ footer .copyright {
 
 /* responsive process for tablets */
 @media (max-width: 1024px){
+    .section-one {
+        padding-bottom: 5rem;
+    }
     .menu-btn {
         z-index: 1000;
         visibility: visible;
@@ -718,6 +767,9 @@ footer .copyright {
 
 /* responsive process for mobile phones */
 @media (max-width: 576px){
+    .section-one {
+        padding-bottom: 5rem;
+    }
     .menu-btn {
         z-index: 1000;
         visibility: visible;
